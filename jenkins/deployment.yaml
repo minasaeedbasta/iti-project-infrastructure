@@ -16,6 +16,8 @@ spec:
       labels:
         app: jenkins
     spec:
+      serviceAccountName: jenkins
+      automountServiceAccountToken: true
       securityContext:
         fsGroup: 1000 
         runAsUser: 0
