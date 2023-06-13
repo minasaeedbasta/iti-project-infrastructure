@@ -24,20 +24,20 @@ spec:
       initContainers:
       - name: install-docker
         image: docker:stable
-        command: ["cp", "/usr/local/bin/docker", "/data/docker"]    
+        command: ["cp", "/usr/local/bin/docker", "/data/docker"]
         volumeMounts:
         - name: docker
           mountPath: "/data"
       - name: install-kubectl
         image: eslamkarim/jenkins-ansible-kubectl
-        command: ["cp", "/usr/local/bin/kubectl", "/data/kubectl"]    
+        command: ["cp", "/usr/local/bin/kubectl", "/data/kubectl"]
         volumeMounts:
         - name: kubectl
           mountPath: "/data" 
       containers:
       - image: jenkins/jenkins:lts-jdk11
         imagePullPolicy: IfNotPresent
-        name: jenkins            
+        name: jenkins
         ports:
         - containerPort: 8080
           protocol: TCP
