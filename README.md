@@ -1,4 +1,4 @@
-# ITI Web App Jenkins
+# ITI Devops Project
 
 This is a devops project developed as part of a project at ITI (Information Technology Institute). The purpose of this project is to demonstrate infrastructure provisioning using Terraform as IaC (Infrastructure as Code) for deploying the web application on Kubernetes clusters on Google Cloud Platform (GCP).
 
