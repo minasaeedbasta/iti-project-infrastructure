@@ -52,7 +52,7 @@ resource "google_compute_firewall" "rules" {
   project     = var.project_id
   name        = "jenkins-rule"
   network     = google_compute_network.vpc.name
-  description = "Allow access to jenkins node port service && the web server"
+  description = "Allow ssh protocol"
 
   allow {
     protocol  = "tcp"
