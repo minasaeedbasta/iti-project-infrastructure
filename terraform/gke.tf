@@ -4,6 +4,12 @@ resource "google_service_account" "custom_service_account" {
   display_name = "GKE Custom Service Account"
 }
 
+resource "google_project_iam_member" "container_admin_binding" {
+  project = var.project_id
+  role    = "roles/container.admin"
+  member  = "serviceAccount:${google_service_account.custom_service_account.email}"
+}
+
 # Get all zones available in the region 
 data "google_compute_zones" "available_zones" {
   region = var.region
