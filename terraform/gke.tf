@@ -4,6 +4,7 @@ resource "google_service_account" "custom_service_account" {
   display_name = "GKE Custom Service Account"
 }
 
+# assign roles to service account
 resource "google_project_iam_member" "container_admin_binding" {
   project = var.project_id
   role    = "roles/container.admin"
