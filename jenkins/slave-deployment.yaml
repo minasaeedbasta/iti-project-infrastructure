@@ -23,7 +23,6 @@ spec:
       containers:
       - name: jenkins-ubuntu-slave
         image: minasaiedbasta/gcp-jenkins-slave-java-11
-        command: ["sh", "-c", "service ssh start"]
         imagePullPolicy: Always
         ports:
         - containerPort: 22
